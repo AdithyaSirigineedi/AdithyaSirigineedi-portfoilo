@@ -1,0 +1,149 @@
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/violet.css";
+@import "@radix-ui/colors/mauve.css";
+
+input,
+textarea,
+button {
+	all: unset;
+	box-sizing: border-box;
+}
+
+.FormRoot {
+	width: 100%;
+	max-width: 500px;
+	padding: 32px;
+	background-color: #111;
+	border-radius: 12px;
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+	text-align: left;
+	margin: 0 auto;
+
+}
+
+.FormField {
+	display: grid;
+	margin-bottom: 16px;
+}
+
+.FormLabel {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 35px;
+	color: white;
+}
+
+.FormMessage {
+	font-size: 14px;
+	color: white;
+	opacity: 0.8;
+}
+
+.Input,
+.Textarea {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	font-size: 16px;
+	color: white;
+	background-color: var(--black-a2);
+	box-shadow: 0 0 0 1px var(--black-a6);
+}
+
+.Input:hover,
+.Textarea:hover {
+	box-shadow: 0 0 0 1px black;
+}
+
+.Input:focus,
+.Textarea:focus {
+	box-shadow: 0 0 0 2px black;
+}
+
+.Input::selection,
+.Textarea::selection {
+	background-color: var(--black-a6);
+	color: white;
+}
+
+.Input {
+	padding: 0 14px;
+	height: 42px;
+	line-height: 1;
+}
+
+.Textarea {
+	resize: none;
+	padding: 14px;
+	min-height: 100px;
+}
+
+.Button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	padding: 0 15px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 800;
+	height: 42px;
+	width: 100%;
+	background-color: white;
+	color: var(--violet-11);
+	box-shadow: 0 2px 10px var(--black-a4);
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.Button:hover {
+	background-color: var(--mauve-3);
+}
+
+.Button:focus {
+	box-shadow: 0 0 0 2px black;
+}
+
+@media (max-width: 768px) {
+	.FormRoot {
+		padding: 24px;
+		max-width: 90%;
+	}
+
+	.Input,
+	.Textarea {
+		font-size: 15px;
+	}
+
+	.Button {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 480px) {
+	.FormRoot {
+		padding: 25px; 
+		max-width: 100%; 
+	}
+
+	.FormLabel {
+		font-size: 16px; 
+		line-height: 32px;
+	}
+
+	.Input,
+	.Textarea {
+		font-size: 16px; 
+		padding: 14px; 
+	}
+
+	.Textarea {
+		min-height: 120px; 
+	}
+
+	.Button {
+		font-size: 18px; 
+		padding: 14px 18px; 	}
+}

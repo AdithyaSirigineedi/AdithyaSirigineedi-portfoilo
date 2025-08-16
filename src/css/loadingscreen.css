@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+.loading-screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.loading-screen::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 0, 0.05), transparent 70%);
+  z-index: 0;
+}
+.terminal-box {
+  background-color: #0c0b0b;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ff00;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  margin-bottom: 10%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0px 3px 12px rgba(0, 0, 0, 0.7); 
+}
+
+.terminal-box::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 10px;
+  height: 10px;
+  background: #ff5f56;
+  border-radius: 50%;
+  box-shadow:
+    20px 0 0 #ffbd2e,
+    40px 0 0 #27c93f;
+}
+
+.terminal-title {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.terminal-line {
+  margin: 6px 0;
+  color: skyblue;
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+
+.terminal-line:last-child::after {
+  content: '|';
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-box {
+    padding: 16px 20px;
+    max-width: 95%;
+  }
+
+  .terminal-title {
+    font-size: 15px;
+  }
+
+  .terminal-line {
+    font-size: 14px;
+  }
+
+  .terminal-box::before {
+    top: 10px;
+    left: 14px;
+    width: 8px;
+    height: 8px;
+    box-shadow:
+      16px 0 0 #ffbd2e,
+      32px 0 0 #27c93f;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-box {
+    padding: 14px 16px;
+    max-width: 100%;
+  }
+
+  .terminal-title {
+    font-size: 14px;
+  }
+
+  .terminal-line {
+    font-size: 13px;
+  }
+
+  .terminal-box::before {
+    top: 8px;
+    left: 12px;
+    width: 7px;
+    height: 7px;
+    box-shadow:
+      14px 0 0 #ffbd2e,
+      28px 0 0 #27c93f;
+  }
+}

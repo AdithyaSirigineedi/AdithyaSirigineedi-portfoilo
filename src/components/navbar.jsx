@@ -19,6 +19,7 @@ const Navbar = () => {
                     <a href="#education" onClick={toggleSidebar}>Education</a>
                     <a href="#experience" onClick={toggleSidebar}>Experience</a>
                     <a href="#contact" onClick={toggleSidebar}>Contact</a>
+                
                 </div>
 
                 <div className="navbar-right-section">

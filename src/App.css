@@ -23,7 +23,6 @@ html, body {
   flex-wrap: wrap;
   margin-top: 2%;
 }
-
 .text-container {
   max-width: 600px;
   opacity: 0;
@@ -109,6 +108,7 @@ html, body {
   height: auto;
   border-radius: 20px;
   object-fit: cover;
+  margin-bottom: 21%;
 }
 
 .technologies-section {

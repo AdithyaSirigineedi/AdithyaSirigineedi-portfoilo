@@ -24,7 +24,7 @@ import globeImage from './images/globe.png';
 import QuizImage from './images/quiz.png';
 import SplashCursor from './components/cursor.jsx';
 import ShinyText from './components/text.jsx';
-
+import ScrollButton from './components/scroll.jsx';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -336,7 +336,8 @@ const App = () => {
           Eluru, AndhraPradesh, India<br/>
           <span>adithya.collector@gmail.com</span>
         </h2>
-
+       
+    <ScrollButton />
 
       </div>
     </>
